@@ -23,7 +23,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <ftdi.h>
 
 int vendor_id = 0x0403;
-int bad_pid = 0x0000;
+int product_id = 0x6001;
 
 int main(void)
 {
@@ -47,7 +47,7 @@ int main(void)
         version.snapshot_str);
 
     // Find and open devices
-    if ((num_devices = ftdi_usb_find_all(ftdi, &devlist, vendor_id, bad_pid)) < 0)
+    if ((num_devices = ftdi_usb_find_all(ftdi, &devlist, vendor_id, good_pid)) < 0)
     {
         fprintf(stderr, "Unable to list devices: %d (%s)\n", num_devices, ftdi_get_error_string(ftdi));
         return num_devices;
