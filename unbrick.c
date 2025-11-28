@@ -23,7 +23,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <ftdi.h>
 
 int vendor_id = 0x0403;
-int bad_pid = 0x0000;
+int bad_pid = 0x6001;
 
 int main(void)
 {
